@@ -13,32 +13,32 @@
     </div>
     <div class="dashboard">
       <div class="formBody">
-        <form action="">
+        <form action="" class="form-main">
           <div class="formFlex">
             <div class="fieldData">
               <label>Book Name</label>
-              <input type="text" />
+              <input class="name" type="text" name="name" required/>
             </div>
             <div class="fieldData">
               <label>Author</label>
-              <input type="text" />
+              <input class="author" type="text" name="author" required/>
             </div>
             <div class="fieldData">
               <label>Pages</label>
-              <input type="text" />
+              <input class="pages" type="number" name="pages" required/>
             </div>
           </div>
           <div class="btnGroup">
             <div>
-              <button type="submit">Submit</button>
-              <button type="reset">Reset</button>
+              <button type="submit" name="submit">Submit</button>
+              <button type="reset" name="reset">Reset</button>
             </div>
           </div>
         </form>
       </div>
-      <div class="info">
-        Hello
-      </div>
+      
     </div>
+    <div class="library"></div>
   </body>
+  <script src="main.js"></script>
 </html>
