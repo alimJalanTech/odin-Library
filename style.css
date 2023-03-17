@@ -6,10 +6,10 @@
 .header > p {
   background-color: #0099cc;
   color: #fff;
-  padding: 20px;
-  text-align: center;
   font-size: 36px;
   font-weight: bold;
+  padding: 20px;
+  text-align: center;
 }
 
 .dashboard {
@@ -18,8 +18,8 @@
 }
 
 .form-body {
-  padding: 20px;
   margin: 10px;
+  padding: 20px;
 }
 
 .form-flex {
@@ -29,24 +29,24 @@
 }
 
 .lower-input {
-    display: grid;
-    grid-template-columns: 40% 20%;
+  display: grid;
+  grid-template-columns: 40% 20%;
 }
 
 .pages {
-    width: 70%;
+  width: 70%;
 }
 
 label {
   display: block;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   font-size: 20px;
   margin-bottom: 5px;
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
 
 input {
-  padding: 0.5rem;
   border-radius: 5px;
+  padding: 0.5rem;
   transition: box-shadow 0.2s ease;
 }
 
@@ -57,11 +57,11 @@ input {
 }
 
 button {
-  border: none;
   border-radius: 4px;
+  border: none;
+  cursor: pointer;
   font-size: 1rem;
   padding: 0.5rem 1rem;
-  cursor: pointer;
 }
 
 .card {
@@ -84,22 +84,22 @@ button {
 }
 
 .right-half {
-    margin: 15px;
-    padding: 30px;
+  margin: 15px;
+  padding: 30px;
 }
 
 .right-half > p {
-    margin: 30px;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    font-size: 20px;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  font-size: 20px;
+  margin: 30px;
 }
 
 .remove-btn {
-    border: 3px solid red;
-    border-radius: 15px;
-    background-color: tomato;
-    color: white;
-    font-weight: bolder;
+  border: 3px solid red;
+  border-radius: 15px;
+  background-color: tomato;
+  color: white;
+  font-weight: bolder;
 }
 
 .card-head {
@@ -109,9 +109,6 @@ button {
   flex-direction: column;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   justify-content: center;
-  padding: 10px;
   margin: 20px;
+  padding: 10px;
 }
-
-
-

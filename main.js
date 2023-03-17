@@ -1,4 +1,5 @@
-let myLibrary = [
+// used Const because myLibrary is functionally altered but not reassigned
+const myLibrary = [
     {
         "name": "The Hobbit",
         "author": "J.R.R. Tolkien",
@@ -28,7 +29,6 @@ function addBookToLibrary() {
   const read = document.querySelector(".read").checked;
   
   let newBook = new Book(bookName, author, pages, read);
-  console.log(newBook);
   myLibrary.push(newBook);
   
   render();
@@ -65,15 +65,12 @@ function render() {
 }
 
 function removeBook(position) {
-  console.log(position);
   myLibrary.splice(position, 1);
   render();
 }
 
 function changeRead(index) {
-  console.log(index);
-  const status = myLibrary[index].read;
-  myLibrary[index].read = !status;
+  myLibrary[index].read = myLibrary[index].read;
   render();
 }
 
