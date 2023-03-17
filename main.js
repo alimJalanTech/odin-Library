@@ -1,9 +1,23 @@
-let myLibrary = [];
+let myLibrary = [
+    {
+        "name": "The Hobbit",
+        "author": "J.R.R. Tolkien",
+        "pages": 310,
+        "read": true
+    },
+    {
+        "name": "Pride and Prejudice",
+        "author": "Jane Austen",
+        "pages": 432,
+        "read": false
+    }
+];
 
-function Book(book, author, pages) {
+function Book(book, author, pages, read) {
   this.name = book;
   this.author = author;
   this.pages = pages;
+  this.read = read;
 }
 
 function addBookToLibrary() {
@@ -11,9 +25,12 @@ function addBookToLibrary() {
   const bookName = document.querySelector(".name").value;
   const author = document.querySelector(".author").value;
   const pages = document.querySelector(".pages").value;
-  let newBook = new Book(bookName, author, pages);
+  const read = document.querySelector(".read").checked;
+  
+  let newBook = new Book(bookName, author, pages, read);
   console.log(newBook);
   myLibrary.push(newBook);
+  
   render();
 }
 
@@ -27,11 +44,18 @@ function render() {
     bookEl.innerHTML = `
         <div class="card">
         <div class="card-head">
-            <h3 class="title"> ${book.name} </h3>
-            <h3 class="title"> ${book.author} </h3>
+            <h3 class="title"> Book Name: ${book.name} </h3>
+            <h3 class="title"> Author: ${book.author} </h3>
+            <h3>  ${book.pages} Pages <h3>
+            <button class="read-status" onclick="changeRead(${i})"> 
+            ${
+              book.read
+                ? '<div style="color:green">Read</div>'
+                : '<div style="color:red">Not Read</div>'
+            } 
+            </button>
         </div>
         <div>
-            <h3>  ${book.pages} Pages <h3>
             <button class="remove-btn" onclick="removeBook(${i})">Remove Book ${i}</button>
         </div>
         </div>
@@ -46,16 +70,26 @@ function removeBook(position) {
   render();
 }
 
+function changeRead(index) {
+  console.log(index);
+  const status = myLibrary[index].read;
+  myLibrary[index].read = !status;
+  render();
+}
+
+function emptyForm() {
+  const inputFields = form.getElementsByTagName("input");
+  Array.from(inputFields).forEach(function (field) {
+    field.value = "";
+  });
+}
+
+render()
 const form = document.querySelector(".form-main");
-const container = document.querySelector(".row");
 
 form.addEventListener("submit", function (event) {
   event.preventDefault();
   addBookToLibrary();
 
-  // Clear form fields
-  const inputFields = form.getElementsByTagName("input");
-  Array.from(inputFields).forEach(function (field) {
-    field.value = "";
-  });
+  emptyForm();
 });
