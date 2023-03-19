@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library System</title>
+    <link rel="stylesheet" href="./style.css">
+  </head>
+  <body>
+    <div class="header">
+      <p>Library Management System</p>
+    </div>
+    <div class="dashboard">
+      <div class="form-body">
+        <form action="" class="form-main">
+          <div class="form-flex">
+            <div class="field-data">
+              <label>Book Name</label>
+              <input class="name" type="text" name="name" required />
+            </div>
+            <div class="field-data">
+              <label>Author</label>
+              <input class="author" type="text" name="author" required />
+            </div>
+            <div class="field-data lower-input">
+              <div>
+                <label>Pages</label>
+                <input class="pages" type="number" name="pages" required />
+              </div>
+              <div class="check">
+                <label>Read Status</label>
+                <input class="read" type="checkbox" name="read" />
+              </div>
+            </div>
+          </div>
+          <div class="btn-group">
+            <div>
+              <button type="submit" name="submit">Submit</button>
+              <button type="reset" name="reset">Reset</button>
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="right-half">
+        <p>
+          To add a book to the library, follow these steps: Start by filling in
+          the form with the details of your book: Book Name: Enter your Book's
+          title Author: Enter the name of your author Number of Pages: Enter the
+          total number of pages of your book Have You Read This?
+        </p>
+        <p>
+            Check the box
+          if you have read this book. Click the "Submit" button to submit the
+          form. Your book will now be added to the Library! You can view it in
+          the list below along with any other books that have been added. To
+          remove a book or change its read status, click on the appropriate
+          button next to the book. That's it! You can go ahead and add as many
+          books as you want. Happy reading!
+        </p>
+      </div>
+    </div>
+    <div class="library"></div>
+  </body>
+  <script src="main.js"></script>
+</html>
