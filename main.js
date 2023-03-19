@@ -70,7 +70,7 @@ function removeBook(position) {
 }
 
 function changeRead(index) {
-  myLibrary[index].read = myLibrary[index].read;
+  myLibrary[index].read = !myLibrary[index].read;
   render();
 }
 
